@@ -35,7 +35,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Inter", sans-serif;
-  width: 900px;
+  width: 1000px;
 }
 
 .header {
@@ -140,6 +140,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 230px;
+  height: 190px;
+  border-radius: 7px;
+  padding: 10px 55px;
 }
 
 .large-blocks__heading-container {
@@ -156,6 +162,31 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 20px 0 15px 0;
+}
+
+.large-blocks__username {
+  font-size: 14px;
+  margin: 0 0 0 10px;
+}
+
+.large-blocks__value {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.large-blocks__label {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.large-blocks__net {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 20px 0 20px 0;
 }
 
 .small-blocks {

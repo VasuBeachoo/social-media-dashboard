@@ -58,7 +58,7 @@ body {
 .dashboard {
   @include flex(column, flex-start, center);
   font-family: $font;
-  width: 900px;
+  width: 1000px;
 }
 
 .header {
@@ -102,10 +102,40 @@ body {
 
   &__block {
     @include flex(column, flex-start, center);
+    box-sizing: border-box;
+    width: 230px;
+    height: 190px;
+    border-radius: 7px;
+    padding: 10px 55px;
   }
 
   &__heading-container {
     @include flex(row, flex-start, center);
+    margin: 20px 0 15px 0;
+  }
+
+  &__username {
+    font-size: 14px;
+    margin: 0 0 0 10px;
+  }
+
+  &__value {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__label {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 0;
+  }
+
+  &__net {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 20px 0 20px 0;
   }
 }
 
