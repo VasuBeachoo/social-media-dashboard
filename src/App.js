@@ -4,6 +4,7 @@ import twitterIcon from "./assets/icon-twitter.svg";
 import youtubeIcon from "./assets/icon-youtube.svg";
 
 import SmallBlock from "./components/SmallBlock";
+import LargeBlock from "./components/LargeBlock";
 
 const App = () => {
   return (
@@ -20,7 +21,40 @@ const App = () => {
         </div>
       </section>
       <section className="large-blocks">
-        <div className="large-blocks__container"></div>
+        <div className="large-blocks__container">
+          <LargeBlock
+            iconSrc={facebookIcon}
+            iconAlt="icon-facebook"
+            username="@nathanf"
+            value="1987"
+            label="FOLLOWERS"
+            net="12"
+          />
+          <LargeBlock
+            iconSrc={twitterIcon}
+            iconAlt="icon-twitter"
+            username="@nathanf"
+            value="1044"
+            label="FOLLOWERS"
+            net="99"
+          />
+          <LargeBlock
+            iconSrc={instagramIcon}
+            iconAlt="icon-instagram"
+            username="@nathanf"
+            value="11k"
+            label="FOLLOWERS"
+            net="1099"
+          />
+          <LargeBlock
+            iconSrc={youtubeIcon}
+            iconAlt="icon-youtube"
+            username="Nathan F."
+            value="8239"
+            label="SUBSCRIBERS"
+            net="144"
+          />
+        </div>
       </section>
       <section className="small-blocks">
         <h3 className="small-blocks__heading">Overview - Today</h3>

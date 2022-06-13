@@ -6,7 +6,7 @@ const SmallBlock = ({ title, value, iconSrc, iconAlt, net }) => {
         <p className="small-blocks__value">{value}</p>
       </div>
       <div className="small-blocks__container">
-        <img className="small-blocks__title" src={iconSrc} alt={iconAlt}></img>
+        <img src={iconSrc} alt={iconAlt} className="small-blocks__icon"></img>
         <p className="small-blocks__net">{net}</p>
       </div>
     </div>
