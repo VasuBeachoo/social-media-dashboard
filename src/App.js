@@ -3,6 +3,8 @@ import facebookIcon from "./assets/icon-facebook.svg";
 import instagramIcon from "./assets/icon-instagram.svg";
 import twitterIcon from "./assets/icon-twitter.svg";
 import youtubeIcon from "./assets/icon-youtube.svg";
+import upIcon from "./assets/icon-up.svg";
+import downIcon from "./assets/icon-down.svg";
 
 import SmallBlock from "./components/SmallBlock";
 import LargeBlock from "./components/LargeBlock";
@@ -30,6 +32,8 @@ const App = () => {
               username="@nathanf"
               value="1987"
               label="FOLLOWERS"
+              netIconSrc={upIcon}
+              netIconAlt="icon-up"
               net="12"
             />
             <LargeBlock
@@ -38,14 +42,18 @@ const App = () => {
               username="@nathanf"
               value="1044"
               label="FOLLOWERS"
+              netIconSrc={upIcon}
+              netIconAlt="icon-up"
               net="99"
             />
             <LargeBlock
               iconSrc={instagramIcon}
               iconAlt="icon-instagram"
-              username="@nathanf"
+              username="@realnathanf"
               value="11k"
               label="FOLLOWERS"
+              netIconSrc={upIcon}
+              netIconAlt="icon-up"
               net="1099"
             />
             <LargeBlock
@@ -54,6 +62,8 @@ const App = () => {
               username="Nathan F."
               value="8239"
               label="SUBSCRIBERS"
+              netIconSrc={downIcon}
+              netIconAlt="icon-down"
               net="144"
             />
           </div>
@@ -66,6 +76,8 @@ const App = () => {
               value="87"
               iconSrc={facebookIcon}
               iconAlt="icon-facebook"
+              netIconSrc={upIcon}
+              netIconAlt="icon-up"
               net="3%"
             />
             <SmallBlock
@@ -73,6 +85,8 @@ const App = () => {
               value="52"
               iconSrc={facebookIcon}
               iconAlt="icon-facebook"
+              netIconSrc={downIcon}
+              netIconAlt="icon-down"
               net="2%"
             />
             <SmallBlock
@@ -80,6 +94,8 @@ const App = () => {
               value="5462"
               iconSrc={instagramIcon}
               iconAlt="icon-instagram"
+              netIconSrc={upIcon}
+              netIconAlt="icon-up"
               net="2257%"
             />
             <SmallBlock
@@ -87,6 +103,8 @@ const App = () => {
               value="52k"
               iconSrc={instagramIcon}
               iconAlt="icon-instagram"
+              netIconSrc={upIcon}
+              netIconAlt="icon-up"
               net="1375%"
             />
           </div>
@@ -96,6 +114,8 @@ const App = () => {
               value="117"
               iconSrc={twitterIcon}
               iconAlt="icon-twitter"
+              netIconSrc={upIcon}
+              netIconAlt="icon-up"
               net="303%"
             />
             <SmallBlock
@@ -103,6 +123,8 @@ const App = () => {
               value="507"
               iconSrc={twitterIcon}
               iconAlt="icon-twitter"
+              netIconSrc={upIcon}
+              netIconAlt="icon-up"
               net="553%"
             />
             <SmallBlock
@@ -110,6 +132,8 @@ const App = () => {
               value="107"
               iconSrc={youtubeIcon}
               iconAlt="icon-youtube"
+              netIconSrc={downIcon}
+              netIconAlt="icon-down"
               net="19%"
             />
             <SmallBlock
@@ -117,6 +141,8 @@ const App = () => {
               value="1407"
               iconSrc={youtubeIcon}
               iconAlt="icon-youtube"
+              netIconSrc={downIcon}
+              netIconAlt="icon-down"
               net="12%"
             />
           </div>

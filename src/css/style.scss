@@ -59,12 +59,13 @@ body {
   @include flex(column, flex-start, center);
   font-family: $font;
   width: 1000px;
+  margin: 70px 0;
 }
 
 .header {
   @include flex(row, flex-start, center);
   width: 100%;
-  margin: 50px 0 30px 0;
+  margin: 0 0 30px 0;
 
   &__container {
     @include flex(column, flex-start, flex-start);
@@ -107,11 +108,15 @@ body {
     height: 190px;
     border-radius: 7px;
     padding: 10px 55px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__heading-container {
     @include flex(row, flex-start, center);
-    margin: 20px 0 15px 0;
+    margin: 20px 0 17px 0;
   }
 
   &__username {
@@ -122,7 +127,7 @@ body {
   &__value {
     font-size: 40px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 0 5px 0;
   }
 
   &__label {
@@ -132,25 +137,75 @@ body {
     margin: 0;
   }
 
-  &__net {
+  &__net-container {
+    @include flex(row, flex-start, center);
+    margin: 20px 0 20px 0;
+  }
+
+  &__net-text {
     font-size: 12px;
     font-weight: 400;
-    margin: 20px 0 20px 0;
+    margin: 0 0 0 3px;
   }
 }
 
 .small-blocks {
   width: 100%;
 
+  &__heading {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
   &__container {
     @include flex(row, space-between, flex-start);
   }
 
   &__block {
-    @include flex(row, flex-start, flex-start);
+    @include flex(row, space-between, flex-start);
+    box-sizing: border-box;
+    width: 230px;
+    border-radius: 7px;
+    padding: 25px;
+    margin: 0 0 22px 0;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__column {
-    @include flex(column, flex-start, flex-start);
+    @include flex(column, space-between, flex-start);
+    height: 70px;
+
+    &--right {
+      align-items: flex-end;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__value {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__icon {
+    width: 18px;
+  }
+
+  &__net-container {
+    @include flex(row, flex-start, center);
+  }
+
+  &__net-text {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 0 0 3px;
   }
 }

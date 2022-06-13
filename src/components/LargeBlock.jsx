@@ -1,4 +1,13 @@
-const LargeBlock = ({ iconSrc, iconAlt, username, value, label, net }) => {
+const LargeBlock = ({
+  iconSrc,
+  iconAlt,
+  username,
+  value,
+  label,
+  netIconSrc,
+  netIconAlt,
+  net,
+}) => {
   return (
     <div className="large-blocks__block">
       <div className="large-blocks__heading-container">
@@ -7,7 +16,14 @@ const LargeBlock = ({ iconSrc, iconAlt, username, value, label, net }) => {
       </div>
       <p className="large-blocks__value">{value}</p>
       <p className="large-blocks__label">{label}</p>
-      <p className="large-blocks__net">{net}</p>
+      <div className="large-blocks__net-container">
+        <img
+          src={netIconSrc}
+          alt={netIconAlt}
+          className="large-blocks__net-icon"
+        />
+        <p className="large-blocks__net-text">{net}</p>
+      </div>
     </div>
   );
 };
