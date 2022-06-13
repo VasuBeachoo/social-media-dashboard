@@ -1,3 +1,4 @@
+import "./css/style.css";
 import facebookIcon from "./assets/icon-facebook.svg";
 import instagramIcon from "./assets/icon-instagram.svg";
 import twitterIcon from "./assets/icon-twitter.svg";
@@ -13,11 +14,11 @@ const App = () => {
         <div className="header__container">
           <h3 className="header__heading">Social Media Dashboard</h3>
           <p className="header__paragraph">Total followers: 23,004</p>
-          <div className="header__toggle-container">
-            <p className="header__toggle-label">Light Mode</p>
-            <div className="header__toggle"></div>
-            <p className="header__toggle-l">Dark Mode</p>
-          </div>
+        </div>
+        <div className="header__toggle-container">
+          <p className="header__toggle-label">Light Mode</p>
+          <div className="header__toggle"></div>
+          <p className="header__toggle-l">Dark Mode</p>
         </div>
       </section>
       <section className="large-blocks">
