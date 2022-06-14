@@ -28,6 +28,20 @@ body {
   background-color: #1e202a;
 }
 
+.background-top {
+  position: absolute;
+  width: 100%;
+  height: 280px;
+}
+
+.background-top--light {
+  background-color: #f5f7ff;
+}
+
+.background-top--dark {
+  background-color: #1f212e;
+}
+
 .dashboard {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,6 +59,7 @@ body {
   font-family: "Inter", sans-serif;
   width: 1000px;
   margin: 70px 0;
+  z-index: 1;
 }
 
 .header {
@@ -227,6 +242,8 @@ body {
   transition: 0.25s;
   height: 190px;
   padding: 10px 55px;
+  border-top-width: 4.5px;
+  border-top-style: solid;
 }
 
 .large-blocks__block:hover {
@@ -340,6 +357,22 @@ body {
 
 .large-blocks__net-text--negative {
   color: #dc414c;
+}
+
+#large-block-facebook {
+  border-color: #198ff5;
+}
+
+#large-block-twitter {
+  border-color: #1ca0f2;
+}
+
+#large-block-instagram {
+  border-color: #df4996;
+}
+
+#large-block-youtube {
+  border-color: #c4032a;
 }
 
 .small-blocks {

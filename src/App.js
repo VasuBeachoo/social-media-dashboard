@@ -17,6 +17,7 @@ const App = () => {
 
   return (
     <div className={`dashboard-container dashboard-container--${mode}`}>
+      <div className={`background-top background-top--${mode}`}></div>
       <div className="dashboard">
         <section className="header">
           <div className="header__container">
@@ -44,6 +45,7 @@ const App = () => {
         <section className="large-blocks">
           <div className="large-blocks__container">
             <LargeBlock
+              id="large-block-facebook"
               iconSrc={facebookIcon}
               iconAlt="icon-facebook"
               username="@nathanf"
@@ -56,6 +58,7 @@ const App = () => {
               mode={mode}
             />
             <LargeBlock
+              id="large-block-twitter"
               iconSrc={twitterIcon}
               iconAlt="icon-twitter"
               username="@nathanf"
@@ -68,6 +71,7 @@ const App = () => {
               mode={mode}
             />
             <LargeBlock
+              id="large-block-instagram"
               iconSrc={instagramIcon}
               iconAlt="icon-instagram"
               username="@realnathanf"
@@ -80,6 +84,7 @@ const App = () => {
               mode={mode}
             />
             <LargeBlock
+              id="large-block-youtube"
               iconSrc={youtubeIcon}
               iconAlt="icon-youtube"
               username="Nathan F."

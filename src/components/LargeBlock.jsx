@@ -1,4 +1,5 @@
 const LargeBlock = ({
+  id,
   iconSrc,
   iconAlt,
   username,
@@ -11,7 +12,7 @@ const LargeBlock = ({
   mode,
 }) => {
   return (
-    <div className={`large-blocks__block large-blocks__block--${mode}`}>
+    <div id={id} className={`large-blocks__block large-blocks__block--${mode}`}>
       <div className="large-blocks__heading-container">
         <img src={iconSrc} alt={iconAlt} className="large-blocks__icon" />
         <p className={`large-blocks__username large-blocks__username--${mode}`}>
