@@ -7,22 +7,34 @@ const LargeBlock = ({
   netIconSrc,
   netIconAlt,
   net,
+  netSign,
+  mode,
 }) => {
   return (
-    <div className="large-blocks__block">
+    <div className={`large-blocks__block large-blocks__block--${mode}`}>
       <div className="large-blocks__heading-container">
         <img src={iconSrc} alt={iconAlt} className="large-blocks__icon" />
-        <p className="large-blocks__username">{username}</p>
+        <p className={`large-blocks__username large-blocks__username--${mode}`}>
+          {username}
+        </p>
       </div>
-      <p className="large-blocks__value">{value}</p>
-      <p className="large-blocks__label">{label}</p>
+      <p className={`large-blocks__value large-blocks__value--${mode}`}>
+        {value}
+      </p>
+      <p className={`large-blocks__label large-blocks__label--${mode}`}>
+        {label}
+      </p>
       <div className="large-blocks__net-container">
         <img
           src={netIconSrc}
           alt={netIconAlt}
           className="large-blocks__net-icon"
         />
-        <p className="large-blocks__net-text">{net}</p>
+        <p
+          className={`large-blocks__net-text large-blocks__net-text--${netSign}`}
+        >
+          {net} Today
+        </p>
       </div>
     </div>
   );

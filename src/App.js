@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./css/style.css";
 import facebookIcon from "./assets/icon-facebook.svg";
 import instagramIcon from "./assets/icon-instagram.svg";
@@ -5,23 +6,39 @@ import twitterIcon from "./assets/icon-twitter.svg";
 import youtubeIcon from "./assets/icon-youtube.svg";
 import upIcon from "./assets/icon-up.svg";
 import downIcon from "./assets/icon-down.svg";
-
 import SmallBlock from "./components/SmallBlock";
 import LargeBlock from "./components/LargeBlock";
 
 const App = () => {
+  const [mode, setMode] = useState("dark");
+
+  const switchTheme = () =>
+    mode === "light" ? setMode("dark") : setMode("light");
+
   return (
-    <div className="dashboard-container">
+    <div className={`dashboard-container dashboard-container--${mode}`}>
       <div className="dashboard">
         <section className="header">
           <div className="header__container">
-            <h3 className="header__heading">Social Media Dashboard</h3>
-            <p className="header__paragraph">Total followers: 23,004</p>
+            <h3 className={`header__heading header__heading--${mode}`}>
+              Social Media Dashboard
+            </h3>
+            <p className={`header__paragraph header__paragraph--${mode}`}>
+              Total followers: 23,004
+            </p>
           </div>
           <div className="header__toggle-container">
-            <p className="header__toggle-label">Light Mode</p>
-            <div className="header__toggle"></div>
-            <p className="header__toggle-label">Dark Mode</p>
+            <p className={`header__toggle-label header__toggle-label--${mode}`}>
+              Light Mode
+            </p>
+            <div className="header__toggle" onClick={switchTheme}>
+              <div
+                className={`header__toggle-circle header__toggle-circle--${mode}`}
+              ></div>
+            </div>
+            <p className={`header__toggle-label header__toggle-label--${mode}`}>
+              Dark Mode
+            </p>
           </div>
         </section>
         <section className="large-blocks">
@@ -35,6 +52,8 @@ const App = () => {
               netIconSrc={upIcon}
               netIconAlt="icon-up"
               net="12"
+              netSign="positive"
+              mode={mode}
             />
             <LargeBlock
               iconSrc={twitterIcon}
@@ -45,6 +64,8 @@ const App = () => {
               netIconSrc={upIcon}
               netIconAlt="icon-up"
               net="99"
+              netSign="positive"
+              mode={mode}
             />
             <LargeBlock
               iconSrc={instagramIcon}
@@ -55,6 +76,8 @@ const App = () => {
               netIconSrc={upIcon}
               netIconAlt="icon-up"
               net="1099"
+              netSign="positive"
+              mode={mode}
             />
             <LargeBlock
               iconSrc={youtubeIcon}
@@ -65,11 +88,17 @@ const App = () => {
               netIconSrc={downIcon}
               netIconAlt="icon-down"
               net="144"
+              netSign="negative"
+              mode={mode}
             />
           </div>
         </section>
         <section className="small-blocks">
-          <h3 className="small-blocks__heading">Overview - Today</h3>
+          <h3
+            className={`small-blocks__heading small-blocks__heading--${mode}`}
+          >
+            Overview - Today
+          </h3>
           <div className="small-blocks__container">
             <SmallBlock
               title="Page Views"
@@ -79,6 +108,8 @@ const App = () => {
               netIconSrc={upIcon}
               netIconAlt="icon-up"
               net="3%"
+              netSign="positive"
+              mode={mode}
             />
             <SmallBlock
               title="Likes"
@@ -88,6 +119,8 @@ const App = () => {
               netIconSrc={downIcon}
               netIconAlt="icon-down"
               net="2%"
+              netSign="negative"
+              mode={mode}
             />
             <SmallBlock
               title="Likes"
@@ -97,6 +130,8 @@ const App = () => {
               netIconSrc={upIcon}
               netIconAlt="icon-up"
               net="2257%"
+              netSign="positive"
+              mode={mode}
             />
             <SmallBlock
               title="Profile Views"
@@ -106,6 +141,8 @@ const App = () => {
               netIconSrc={upIcon}
               netIconAlt="icon-up"
               net="1375%"
+              netSign="positive"
+              mode={mode}
             />
           </div>
           <div className="small-blocks__container">
@@ -117,6 +154,8 @@ const App = () => {
               netIconSrc={upIcon}
               netIconAlt="icon-up"
               net="303%"
+              netSign="positive"
+              mode={mode}
             />
             <SmallBlock
               title="Likes"
@@ -126,6 +165,8 @@ const App = () => {
               netIconSrc={upIcon}
               netIconAlt="icon-up"
               net="553%"
+              netSign="positive"
+              mode={mode}
             />
             <SmallBlock
               title="Likes"
@@ -135,6 +176,8 @@ const App = () => {
               netIconSrc={downIcon}
               netIconAlt="icon-down"
               net="19%"
+              netSign="negative"
+              mode={mode}
             />
             <SmallBlock
               title="Total Views"
@@ -144,6 +187,8 @@ const App = () => {
               netIconSrc={downIcon}
               netIconAlt="icon-down"
               net="12%"
+              netSign="negative"
+              mode={mode}
             />
           </div>
         </section>
