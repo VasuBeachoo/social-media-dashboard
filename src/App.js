@@ -28,6 +28,7 @@ const App = () => {
               Total followers: 23,004
             </p>
           </div>
+          <hr className={`header__divider header__divider--${mode}`} />
           <div className="header__toggle-container">
             <p className={`header__toggle-label header__toggle-label--${mode}`}>
               Light Mode

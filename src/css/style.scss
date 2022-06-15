@@ -29,6 +29,8 @@ $colors: (
 
 $font: "Inter", sans-serif;
 
+$mobile-width: 1050px;
+
 ///////////////////////////////////////
 // MIXINS /////////////////////////////
 @mixin flex($direction, $justify, $align) {
@@ -87,6 +89,10 @@ $font: "Inter", sans-serif;
       filter: brightness(1.4);
     }
   }
+
+  @include mobile() {
+    width: 320px;
+  }
 }
 
 @mixin net-text() {
@@ -99,6 +105,12 @@ $font: "Inter", sans-serif;
 
   &--negative {
     color: color(Bright-Red);
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $mobile-width) {
+    @content;
   }
 }
 
@@ -147,7 +159,7 @@ body {
   @include flex(column, flex-start, center);
   font-family: $font;
   width: 1000px;
-  margin: 70px 0;
+  margin: 70px 0 50px 0;
   z-index: 1;
 }
 
@@ -173,6 +185,20 @@ body {
     font-weight: 700;
     letter-spacing: 0.4px;
     margin: 0;
+  }
+
+  &__divider {
+    display: none;
+    width: 100%;
+    margin: 25px 0 15px 0;
+
+    &--light {
+      opacity: 1;
+    }
+
+    &--dark {
+      opacity: 0.3;
+    }
   }
 
   &__toggle-container {
@@ -344,5 +370,43 @@ body {
   &__net-text {
     @include net-text();
     margin: 0 0 0 3px;
+  }
+}
+
+@include mobile() {
+  .dashboard {
+    width: 320px;
+  }
+
+  .header {
+    @include flex(column, flex-start, flex-start);
+
+    &__divider {
+      display: block;
+    }
+
+    &__toggle-container {
+      align-self: center;
+    }
+  }
+
+  .large-blocks {
+    &__container {
+      @include flex(column, flex-start, center);
+    }
+
+    &__block {
+      margin: 0 0 25px 0;
+    }
+  }
+
+  .small-blocks {
+    &__container {
+      @include flex(column, flex-start, center);
+    }
+
+    &__block {
+      margin: 0 0 20px 0;
+    }
   }
 }
