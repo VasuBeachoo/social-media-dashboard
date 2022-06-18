@@ -32,6 +32,6 @@ Users should be able to:
 
 ### Built with
 
-- React.js
+- React
 - SCSS (using BEM methodology)
 - Flexbox
